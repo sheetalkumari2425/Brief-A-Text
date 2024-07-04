@@ -15,7 +15,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A python package for NLP app",
+    description="A python package for CNN app",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://gitub.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
