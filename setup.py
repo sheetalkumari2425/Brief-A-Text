@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Brief-A-Text"
 AUTHOR_USER_NAME = "sheetalkumari2425"
-SRC_REPO = "Brief-A-Text"
+SRC_REPO = "briefAtext"
 AUTHOR_EMAIL = "sheetalkumari2425@gmail.com"
 
 setuptools.setup(
