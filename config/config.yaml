@@ -1,6 +1,12 @@
 artifacts_root: artifacts
+
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_url: https://github.com/sheetalkumari2425/Dataset-Brief-A-Text/raw/main/samsum-data.zip
+  source_url: https://github.com/sheetalkumari2425/Dataset-Brief-A-Text/raw/main/summarizer-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE: artifacts/data_validation/status.txt
+  ALL_REQUIRED_FILES: ["samsum-test", "samsum-train", "samsum-validation"]

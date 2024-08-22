@@ -1,6 +1,6 @@
-from briefAtext.config.configuration import ConfigurationManager
-from briefAtext.components.data_ingestion import DataIngestion
-from briefAtext.logging import logger
+from src.briefAtext.config.configuration import ConfigurationManager
+from src.briefAtext.components.data_ingestion import DataIngestion
+from src.briefAtext.logging import logger
 
 class DataIngestionTrainingPipeline:
     

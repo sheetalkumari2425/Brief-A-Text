@@ -17,13 +17,17 @@ from typing import Any
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     try:
+        # print("inside try")
         with open(path_to_yaml) as yaml_file:
+            # print("inside loop")
             content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
+            # print("read_yaml is completed")
             return ConfigBox(content)    
     except BoxValueError:
         raise ValueError("yaml file is empty")
     except Exception as e:
+        # print("different exception")
         raise e
     
 
@@ -34,10 +38,13 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 """    
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
+    # print("inside create_directories")
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
         if verbose:
             logger.info(f"Created directory at: {path}")
+        else:
+            logger.info(f"got some error")
 
 
 
