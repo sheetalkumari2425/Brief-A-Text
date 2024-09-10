@@ -5,3 +5,24 @@ data_validation:
   root_dir: artifacts/data_validation
   STATUS_FILE: artifacts/data_validation/status.txt
   ALL_REQUIRED_FILES: ["test", "train", "val"]
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum_dataset
+  tokenizer_name: google/pegasus-cnn_dailymail
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_transformation/samsum_dataset
+  model_ckpt: google/pegasus-cnn_dailymail
+
+TrainingArguments:
+  num_train_epochs: 1
+  warmup_steps: 1
+  per_device_train_batch_size: 1
+  weight_decay: 0.01
+  logging_steps: 10
+  evaluation_strategy: steps
+  eval_steps: 500
+  save_steps: 1e6
+  gradient_accumuation_steps: 16
